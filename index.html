@@ -1,0 +1,56 @@
+<!DOCTYPE html><html>
+    <head>
+        <meta charset="utf-8"><meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/estilo.css">
+        <script src="./../cordova.js"></script>
+        <script src="js/jquery.js"></script> 
+        <script src="bootstrap/js/bootstrap.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+
+		<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+
+		<script src="js/firebase.js"></script>
+		<script src="js/index.js"></script>
+        <title>Aplicativo</title>
+    </head>
+    <body>
+        <div class="container">
+			<div class="row">
+				<nav class="navbar navbar-dark bg-dark col-12">
+					<a class="navbar-brand" href="index.html">Cadastro</a>
+					<a class="navbar-brand" href="login.html">Login</a>
+				</nav>  
+			</div>
+			<div class="row">
+				<div class="card mb-3 col-12">
+					<div class="card-body">
+						<h5 class="card-title">Insira suas informações</h5>
+								<div class="form-group">
+									<label for="exampleFormControlInput1">Nome:</label>
+									<input type="text" class="form-control" id="txtNome">
+								</div>
+								<div class="form-group">
+									<label for="exampleFormControlInput1">Telefone:</label>
+									<input type="tel" class="form-control" id="txtTelefone" placeholder="(xx)xxxxx-xxxx">
+								</div>
+								<div class="form-group">
+									<label for="exampleFormControlInput1">E-mail:</label>
+									<input type="text" class="form-control" id="txtEmail">
+								</div>
+								<div class="form-group">
+									<label for="exampleFormControlTextarea1">Senha:</label>
+									<input type="password" class="form-control" id="txtSenha">
+								</div>
+								<button id="btnInserir" class="btn btn-primary">Cadastrar</button>
+							</div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>

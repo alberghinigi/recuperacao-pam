@@ -1,0 +1,63 @@
+<!DOCTYPE html><html>
+    <head>
+        <meta charset="utf-8"><meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/estilo.css">
+		<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+
+		<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+		
+
+		<script src="js/firebase.js"></script>
+        <script src="./../cordova.js"></script>
+        <script src="js/jquery.js"></script> 
+        <script src="bootstrap/js/bootstrap.js"></script>
+		<script>
+
+			function login(){
+		var auth = null;
+        firebase.auth().signInWithEmailAndPassword(document.getElementById("txtEmail").value, document.getElementById("txtSenha").value)
+  .then(function(user) {
+    // Signed in
+	auth = user;
+	window.location.href = "historico.html";
+    // ...
+  })
+  .catch(function(error){
+  });
+};
+		</script>
+        <title>Aplicativo</title>
+    </head>
+    <body>
+        <div class="container">
+			<div class="row">
+				<nav class="navbar navbar-dark bg-dark col-12">
+					<a class="navbar-brand" href="login.html">Login</a>
+				</nav>  
+			</div>
+			<div class="row">
+				<div class="card mb-3 col-12">
+					<div class="card-body">
+						
+								<div class="form-group">
+									<label for="exampleFormControlInput1">E-mail:</label>
+									<input type="text" class="form-control" id="txtEmail">
+								</div>
+								<div class="form-group">
+									<label for="exampleFormControlInput1">Senha:</label>
+									<input type="password" class="form-control" id="txtSenha">
+								</div>
+								<button onclick="login()" class="btn btn-primary">Login</button>
+							
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>

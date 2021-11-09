@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/estilo.css">
+        <script src="./../cordova.js"></script>
+        <script src="js/jquery.js"></script> 
+		<script src="bootstrap/js/bootstrap.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+		<script src="js/firebase.js"></script>
+		<script src="js/consultaconta.js"></script>
+        <title>Aplicativo</title>
+    </head>
+<body> 
+	<div class="container">
+		<div class="row">
+			<nav class="navbar navbar-dark bg-dark col-12">
+				<a class="navbar-brand" href="index.html">Aplicativo</a>
+				<a class="navbar-brand" href="historico.html">Histórico</a>
+			</nav>  
+		</div>
+		<div class="row">
+			<div class="card mb-3 col-12">
+				<div class="card-body">
+					<table class="table table-responsive" style="width: auto;">
+						<thead>
+							<tr>
+								<th scope="col">Nome</th>
+								<th scope="col">Telefone</th>
+								<th scope="col">Email</th>
+								<th scope="col">Senha</th>
+							</tr>
+						</thead>
+						<tbody id="TableData">
+
+						</tbody>
+					</table>
+					<button type="button" id="btnListar" class="btn btn-primary">Buscar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
